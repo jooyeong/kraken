@@ -50,7 +50,7 @@ variable "aws_region" {
 
 variable "aws_region_azs" {
   default = {
-    "us-west-2" = "us-west-2a"
+    "us-west-2" = "us-west-2a,us-west-2b"
     "us-east-1" = "us-east-1b,us-east-1c,us-east-1d"
     "us-west-1" = "us-west-1a,us-west-1b"
     "eu-west-1" = "eu-west-1a,eu-west-1b,eu-west-1c"
