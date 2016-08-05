@@ -24,4 +24,5 @@ apiserver_settings:
   tls-cert-file: "{{ kubernetes_cert_dir }}/kube-ca.pem"
   tls-private-key-file: "{{ kubernetes_cert_dir }}/kube-ca-key.pem"
   token-auth-file: "{{ kubernetes_cert_dir }}/known_tokens.csv"
+  cloud-provider: "aws"
   v: 1
