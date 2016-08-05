@@ -20,4 +20,5 @@ kubelet_settings:
   registry-burst: 0
   registry-qps: 0
   sync-frequency: 10s
+  cloud-provider: "aws"
   v: 1
