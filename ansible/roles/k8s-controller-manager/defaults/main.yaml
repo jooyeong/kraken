@@ -23,4 +23,5 @@ controller_manager_settings:
   root-ca-file: "{{ kubernetes_cert_dir }}/kube-ca.pem"
   service-account-private-key-file: "{{ kubernetes_cert_dir }}/kube-ca-key.pem"
   service-sync-period: 5m0s
+  cloud-provider: "aws"
   v: 1
