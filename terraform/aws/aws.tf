@@ -261,6 +261,7 @@ resource "aws_instance" "kubernetes_etcd" {
   vpc_security_group_ids      = ["${aws_security_group.vpc_secgroup.id}"]
   subnet_id                   = "${aws_subnet.vpc_subnet_main.id}"
   associate_public_ip_address = true
+  iam_instance_profile        = "kubernetes-master"
 
   ebs_block_device {
     device_name = "${var.aws_storage_path.ebs}"
@@ -331,6 +332,7 @@ resource "aws_instance" "kubernetes_apiserver" {
   vpc_security_group_ids      = ["${aws_security_group.vpc_secgroup.id}"]
   subnet_id                   = "${aws_subnet.vpc_subnet_main.id}"
   associate_public_ip_address = true
+  iam_instance_profile        = "kubernetes-master"
 
   ebs_block_device {
     device_name = "${var.aws_storage_path.ebs}"
@@ -407,6 +409,7 @@ resource "aws_instance" "kubernetes_master" {
   vpc_security_group_ids      = ["${aws_security_group.vpc_secgroup.id}"]
   subnet_id                   = "${aws_subnet.vpc_subnet_main.id}"
   associate_public_ip_address = true
+  iam_instance_profile        = "kubernetes-master"
 
   ebs_block_device {
     device_name = "${var.aws_storage_path.ebs}"
@@ -484,6 +487,7 @@ resource "aws_instance" "kubernetes_node_special" {
   vpc_security_group_ids      = ["${aws_security_group.vpc_secgroup.id}"]
   subnet_id                   = "${aws_subnet.vpc_subnet_main.id}"
   associate_public_ip_address = true
+  iam_instance_profile        = "kubernetes-minion"
 
   ebs_block_device {
     device_name = "/dev/sdf"
